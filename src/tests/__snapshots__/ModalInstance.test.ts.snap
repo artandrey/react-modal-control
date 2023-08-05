@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Matches state snapshot 1`] = `
+{
+  "Element": [Function],
+  "id": 1,
+  "key": "",
+  "lifecycleState": "PENDING",
+  "props": {},
+}
+`;
+
+exports[`Matches state snapshot 2`] = `
+{
+  "Element": [Function],
+  "id": 1,
+  "key": "",
+  "lifecycleState": "PENDING",
+  "props": {},
+}
+`;
