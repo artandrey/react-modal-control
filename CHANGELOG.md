@@ -1,5 +1,11 @@
 # react-modal-control
 
+## 0.0.5
+
+### Patch Changes
+
+- 1c74dd0: Changed id generation, fixed type issue inside useModalManager, updated docs (described init function)
+
 ## 0.0.4
 
 ### Patch Changes
