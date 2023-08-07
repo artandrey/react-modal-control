@@ -3,7 +3,7 @@ export type ModalWindows = Readonly<
 >;
 
 export interface ModalOpeningOptions<P extends object> {
-  props: (P & object) | undefined;
+  props?: P & object;
 }
 
 export type ModalId = number;
