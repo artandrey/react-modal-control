@@ -114,6 +114,11 @@ const { useModal } = init(MODAL_WINDOWS);
 export default useModal;
 ```
 
+The main reason why the `useModal` hook needs to be created by calling the `init` function is to achieve additional
+type safety for the first argument, which is the key of the modal window,
+and options, including props, for the corresponding modal.
+This allows achieving autocompletion, even when using JavaScript.
+
 ## useModal usage
 
 You can open modal window from any place of your app by using `useModal` hook

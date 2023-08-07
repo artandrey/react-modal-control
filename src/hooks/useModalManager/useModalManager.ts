@@ -30,7 +30,7 @@ export interface ModalManagerOptions extends LifecycleOptions {
 }
 
 export interface ModalManager {
-  open: (key: PropertyKey, options?: ModalOpeningOptions<any>) => void;
+  open: (key: PropertyKey, options?: ModalOpeningOptions<any>) => number;
   close: (id?: number) => void;
   eventProvider: EventStateProvider<IModalState[]>;
   getInstanceById(id: number): ModalInstance | undefined;
@@ -103,6 +103,8 @@ export function useModalManager(options: ModalManagerOptions): ModalManager {
       ) {
         instance.open();
       }
+
+      return id;
     },
     [setModals, modalWindows, type, appearenceMode]
   );
