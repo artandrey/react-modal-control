@@ -7,7 +7,18 @@ The author of the library decided to trust your taste and creativity ✨
 
 ---
 
-Library is currently in alpha stage, so documentation is incompleted and may be changed in future
+## Library is currently in alpha stage, so documentation is incompleted and may be changed in future
+
+## Navigation
+
+- [Installation](#installation)
+- [Setting Up](#setting-up)
+- [useModal Usage](#usemodal-usage)
+- [Animating Your Modal](#animating-your-modal)
+- [Configuring Different Scenarios for Modals](#configure-different-scenarios-for-modals)
+- [Philosophy of the Library](#philosophy-of-the-library)
+
+---
 
 ## Instalation
 
@@ -233,7 +244,7 @@ function ModalWithAnimation() {
 }
 ```
 
-## Multiple captures for one modal window
+### Multiple captures for one modal window
 
 In the event that multiple components are responsible for animations, you can set a delay for each of them.
 The modal window will be closed after 2 seconds because it requires all components to release the modal window before closing it.
@@ -342,3 +353,45 @@ The `during-close` mode allows the next modal window to be displayed while the p
 <p align="center">
   <img width="600" src="./docs/images/diagrams/type-queue-during-close.png" >
 </p>
+
+## Philosophy of the Library
+
+Consider that a modal window in your application is something not tied to a specific component and can exist independently of it. For example, it's very convenient to use built-in methods of the browser API like `prompt` or `confirm` and get the result.
+
+```js
+//inside a function
+
+const userInput = prompt('Enter your name');
+
+if (userInput === null) {
+  alert('Your name is required to continue');
+  return;
+}
+
+// continue
+```
+
+The main conveniences are:
+
+- The ability to invoke them from anywhere in the code.
+- No need to think about the logic of opening dialog windows.
+
+You can also use this library in the same way. Your first step will be to create the modal window itself, unlike built-in `confirm` and `prompt`, your dialog window requires implementation.
+
+After this, you can similarly open it in any component of your application using:
+
+```jsx
+const { open } = useModal();
+
+open('my-prompt', {
+  props: {
+    onValue: (value) => {
+      // display it in your component
+    },
+    onCancel: () => {
+      // show an error message
+      // you can also do this by using your custom error modal window
+    },
+  },
+});
+```
