@@ -20,7 +20,7 @@ The author of the library decided to trust your taste and creativity ✨
 
 ---
 
-## Instalation
+## Installation
 
 Using NPM
 
@@ -354,7 +354,7 @@ The `during-close` mode allows the next modal window to be displayed while the p
   <img width="600" src="./docs/images/diagrams/type-queue-during-close.png" >
 </p>
 
-## Philosophy of the Library
+## Philosophy of the library
 
 Consider that a modal window in your application is something not tied to a specific component and can exist independently of it. For example, it's very convenient to use built-in methods of the browser API like `prompt` or `confirm` and get the result.
 
