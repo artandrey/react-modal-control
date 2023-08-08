@@ -1,5 +1,11 @@
 # react-modal-control
 
+## 0.0.6
+
+### Patch Changes
+
+- 0688f31: Added context name into assertion inside useModal
+
 ## 0.0.5
 
 ### Patch Changes
