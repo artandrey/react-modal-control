@@ -8,7 +8,7 @@ import { ModalOpeningOptions, ModalWindows } from '../types/public-types';
 
 export function useModal<T extends ModalWindows>() {
   const modalsContextValues = useContext(ModalWindowsContext);
-  assertIsContextNotNull(modalsContextValues);
+  assertIsContextNotNull(modalsContextValues, 'ModalWindowsProvider');
 
   const { open, close } = modalsContextValues;
 
