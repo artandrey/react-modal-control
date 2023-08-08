@@ -1,5 +1,11 @@
 # react-modal-control
 
+## 0.0.7
+
+### Patch Changes
+
+- 1da5690: - Added `Philisophy of the library` section and `Navigation` to docs
+
 ## 0.0.6
 
 ### Patch Changes
