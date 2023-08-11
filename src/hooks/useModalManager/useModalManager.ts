@@ -14,6 +14,7 @@ import { EventStateProvider, useEventState } from '../useEventState';
 import { ModalInstance, ModalInstanceLifecycleHooks } from './ModalInstance';
 import { IModalState } from './IModalState';
 import { getFirstMapElement } from '../../helpers/getFirstMapElement';
+import { useConst } from '../useConst';
 
 export interface ModalInstanceOptions {
   hooks?: ModalInstanceLifecycleHooks;
@@ -37,7 +38,7 @@ export interface ModalManager {
 }
 
 export function useModalManager(options: ModalManagerOptions): ModalManager {
-  const { modals: modalWindows, type, appearenceMode } = options;
+  const { modals: modalWindows, type, appearenceMode } = useConst(options);
 
   const modalInstancesRef = useRef<Map<ModalId, ModalInstance>>(new Map());
 
