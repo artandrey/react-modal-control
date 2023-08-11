@@ -281,7 +281,7 @@ function Modal() {
 ```
 
 ⚠ However, it is not recommended to create a delay for each animation.
-The best approach is to add a single delay to the topmost element of the modal window, after which all the window's contents become invisible,
+The best approach is to add a single delay to the element of the modal window, after which all the window's contents become invisible,
 eliminating the need for additional delays.
 
 ## Configure different screnarios for modals
