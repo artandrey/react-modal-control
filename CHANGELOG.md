@@ -1,5 +1,11 @@
 # react-modal-control
 
+## 0.0.8
+
+### Patch Changes
+
+- 70b3e54: Made the options for ModalWindowsProvider static; they can only be set at the beginning. This will help avoid potential errors.
+
 ## 0.0.7
 
 ### Patch Changes
