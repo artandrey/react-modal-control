@@ -8,6 +8,39 @@ export interface ModalRendererProps {
   children: (modal: React.ReactNode) => React.ReactNode;
 }
 
+/**
+ * A React component responsible for rendering and managing modal windows within a React application.
+ * It retrieves modal windows from the modal context and renders them accordingly.
+ *
+ * @param {ModalRendererProps} props - The component's props.
+ * @returns {React.ReactNode} - The rendered modal windows within the application's layout.
+ *
+ * @throws {TypeError} If `children` is not provided as a valid React component.
+ *
+ * @example
+ * // Import the ModalRenderer component
+ * import { ModalRenderer } from 'react-modal-control';
+ *
+ * // Within your application's layout
+ * function App() {
+ *   return (
+ *     <ModalWindowsProvider
+ *       type="queue"
+ *       appearenceMode="after-close"
+ *       modals={MODAL_WINDOWS}
+ *     >
+ *       //rest of your code
+ *       <ModalRenderer>
+ *         {(modal) => (
+ *           <div className="modal-window-wrapper">
+ *             {modal}
+ *           </div>
+ *         )}
+ *       </ModalRenderer>
+ *     </ModalWindowsProvider>
+ *   );
+ * }
+ */
 export const ModalRenderer: React.FC<ModalRendererProps> = ({ children }) => {
   const modalContextValues = useContext(ModalWindowsContext);
   assertIsContextNotNull(modalContextValues);
