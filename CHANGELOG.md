@@ -1,5 +1,11 @@
 # react-modal-control
 
+## 0.0.9
+
+### Patch Changes
+
+- 6b14563: Added basic jsdoc annotations
+
 ## 0.0.8
 
 ### Patch Changes
